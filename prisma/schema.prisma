@@ -34,6 +34,7 @@ model Player{
 
 model SeasonStats{
   id Int @id @default(autoincrement())
+  
   season String
   gamesPlayed Int
   pointsPerGame Float
@@ -41,6 +42,7 @@ model SeasonStats{
   assistsPerGame Float
   playerId Int
   player Player @relation(fields:[playerId], references:[id])
+  @@unique([playerId, season])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
