@@ -22,9 +22,9 @@ model Player{
   id Int @id @default(autoincrement())
   name String
   position String
-  height Float
-  weight Float
-  dateOfBirth DateTime
+  height Float?
+  weight Float?
+  birthDate DateTime?
   stats SeasonStats[]
   teamId Int
   team Team @relation(fields: [teamId], references: [id])
