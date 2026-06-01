@@ -1,11 +1,18 @@
 import * as teamsRepository from "../repositories/teams.repository";
+import AppError from "../../../shared/errors/AppError";
 
 async function getAllTeams() {
   return await teamsRepository.findAll();
 }
 
 async function getTeamById(id: number) {
-  return await teamsRepository.findById(id);
+  const team = await teamsRepository.findById(id);
+
+  if (!team) {
+    throw new AppError("Team not found", 404);
+  }
+
+  return team;
 }
 
 async function getTeamPlayers(teamId: number) {
