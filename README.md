@@ -29,7 +29,7 @@ API REST para consulta e comparação de estatísticas de jogadores da NBA, dese
 **1. Clone o repositório**
 
 ```bash
-git clone https://github.com/seu-usuario/nba-stats-api.git
+git clone https://github.com/rodsouzagx/nba-stats-api.git
 cd nba-stats-api
 ```
 
