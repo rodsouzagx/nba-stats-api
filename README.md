@@ -100,6 +100,23 @@ http://localhost:3333/api/docs
 
 ---
 
+## 📊 Dashboard — Power BI
+
+O projeto inclui um dashboard interativo no Power BI com 3 páginas:
+
+- **Overview** — Distribuição de jogadores por conferência e média de pontos por posição
+- **Top Players** — Top 10 jogadores por média de pontos por jogo
+- **Players Stats** — Tabela completa com estatísticas de todos os jogadores
+
+### Como conectar o Power BI ao banco
+
+1. Abra o arquivo `nba-stats-dashboard.pbix`
+2. O Power BI vai pedir para atualizar a conexão
+3. Informe o servidor `localhost:5433` e o banco `nba_stats`
+4. Use as credenciais: usuário `postgres`, senha `postgres`
+
+---
+
 ## 🏗️ Arquitetura
 
 O projeto segue os princípios da **Clean Architecture** com separação clara de responsabilidades:
